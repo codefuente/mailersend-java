@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.codefuente.mailersend</groupId>
 	<artifactId>java-sdk</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<name>MailerSend Java SDK</name>
 	<description>An SDK for MailerSend API</description>
 	<url>https://github.com/mailersend/mailersend-java</url>
@@ -53,7 +53,7 @@
 		<connection>scm:git:git@github.com:codefuente/mailersend-java.git</connection>
 		<url>scm:git:git@github.com:codefuente/mailersend-java.git</url>
 		<developerConnection>scm:git:git@github.com:codefuente/mailersend-java.git</developerConnection>
-		<tag>adsclient-0.3.1</tag>
+		<tag>java-sdk-1.0.1</tag>
 	</scm>
 
 	<build>
