@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mailersend</groupId>
+	<groupId>com.codefuente.mailersend</groupId>
 	<artifactId>java-sdk</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>MailerSend Java SDK</name>
 	<description>An SDK for MailerSend API</description>
 	<url>https://github.com/mailersend/mailersend-java</url>
@@ -27,12 +27,33 @@
 			<organization>MailerSend</organization>
 			<organizationUrl>https://mailersend.com</organizationUrl>
 		</developer>
+        <developer>
+			<name>Codefuente</name>
+			<email>nacho@codefuente.com</email>
+			<organization>Codefuente</organization>
+		</developer>
 	</developers>
 
+    <repositories>
+        <repository>
+            <id>nexus.codefuente</id>
+            <name>Nexus Codefuente</name>
+            <url>https://nexus.codefuente.com/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus.codefuente</id>
+			<url>https://nexus.codefuente.com/repository/maven-releases/</url>
+		</repository>
+	</distributionManagement>
+
 	<scm>
-		<connection>scm:git:git://github.com/mailersend/mailersend-java.git</connection>
-		<developerConnection>scm:git:ssh://github.com:mailersend/mailersend-java.git</developerConnection>
-		<url>http://github.com/mailersend/mailersend-java/tree/main</url>
+		<connection>scm:git:git@github.com:codefuente/mailersend-java.git</connection>
+		<url>scm:git:git@github.com:codefuente/mailersend-java.git</url>
+		<developerConnection>scm:git:git@github.com:codefuente/mailersend-java.git</developerConnection>
+		<tag>adsclient-0.3.1</tag>
 	</scm>
 
 	<build>
@@ -105,19 +126,13 @@
 			  <artifactId>maven-project-info-reports-plugin</artifactId>
 			  <version>3.0.0</version>
 			</plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
 		</plugins>
 	</build>
-
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-		<repository>
-			<id>ossrh</id>
-			<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-	</distributionManagement>
 
 	<dependencies>
 		<dependency>
